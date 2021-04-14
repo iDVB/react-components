@@ -67,7 +67,6 @@ function CookieDialog() {
                 control={
                   <IOSStyleSwitch
                     checked={tempHasConsent}
-                    onChange={toggleTemporaryCookiesState}
                     name="consent-toggle"
                     inputProps={{ 'aria-label': 'consent checkbox' }}
                   />
@@ -81,10 +80,10 @@ function CookieDialog() {
         }
         dialogActions={
           <>
-            <Button onClick={cancelAndClose} color="default">
+            <Button color="default">
               Cancel
             </Button>
-            <Button onClick={saveSettings} color="primary">
+            <Button color="primary">
               Save
             </Button>
           </>

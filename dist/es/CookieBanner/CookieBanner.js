@@ -30,14 +30,8 @@ var CookieBanner = function CookieBanner() {
 function CookieDialog() {
   var _React$useState3 = React.useState(true),
       _React$useState4 = _slicedToArray(_React$useState3, 2),
-      tempHasConsent = _React$useState4[0],
-      setTempHasConsent = _React$useState4[1];
-
-  function toggleTemporaryCookiesState() {
-    setTempHasConsent(function (state) {
-      return !state;
-    });
-  }
+      tempHasConsent = _React$useState4[0];
+      _React$useState4[1];
 
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(ResponsiveDialog, {
     open: false,
@@ -54,7 +48,6 @@ function CookieDialog() {
     }, /*#__PURE__*/React.createElement(FormControlLabel, {
       control: /*#__PURE__*/React.createElement(IOSStyleSwitch, {
         checked: tempHasConsent,
-        onChange: toggleTemporaryCookiesState,
         name: "consent-toggle",
         inputProps: {
           'aria-label': 'consent checkbox'
@@ -63,10 +56,8 @@ function CookieDialog() {
       label: tempHasConsent ? 'Tracking Enabled' : 'Tracking Disabled'
     }))),
     dialogActions: /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Button, {
-      onClick: cancelAndClose,
       color: "default"
     }, "Cancel"), /*#__PURE__*/React.createElement(Button, {
-      onClick: saveSettings,
       color: "primary"
     }, "Save"))
   }));
