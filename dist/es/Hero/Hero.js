@@ -25,7 +25,7 @@ var Hero = function Hero(props) {
 
 var StyledHeading = styled.h1(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  position: relative;\n  margin: 0;\n  color: black;\n  z-index: 2;\n"])));
 var ImgHolder = styled.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  z-index: 2;\n"])));
-var Overlay = styled.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  top: 0;\n  position: absolute;\n  height: 100%;\n  width: 100%;\n  background: white;\n  z-index: 3;\n  opacity: 0.3;\n"])));
+var Overlay = styled.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  top: 0;\n  height: 100%;\n  width: 100%;\n  background: white;\n  z-index: 3;\n  opacity: 0.3;\n"])));
 var StyledImg = styled.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  height: 100%;\n"])));
 
 export default Hero;

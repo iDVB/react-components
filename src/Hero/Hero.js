@@ -46,7 +46,6 @@ const ImgHolder = styled.div`
 
 const Overlay = styled.div`
   top: 0;
-  position: absolute;
   height: 100%;
   width: 100%;
   background: white;
