@@ -23,8 +23,7 @@ var CookieBanner = function CookieBanner() {
   }, /*#__PURE__*/React.createElement(BannerContainer, null, /*#__PURE__*/React.createElement(BannerCopy, {
     variant: "body2"
   }, "We use cookies and other tracking technologies to assist with navigation, analyze your use of our services, and assist with our promotional and marketing efforts.", ' ', /*#__PURE__*/React.createElement(BannerTextButton, null, "View cookie options")), /*#__PURE__*/React.createElement(BannerButton, {
-    "aria-label": "Accept",
-    onClick: accept
+    "aria-label": "Accept"
   }, "Accept"))), /*#__PURE__*/React.createElement(CookieDialog, null)), document.body);
 };
 

@@ -27,7 +27,7 @@ const CookieBanner = () => {
               View cookie options
             </BannerTextButton>
           </BannerCopy>
-          <BannerButton aria-label="Accept" onClick={accept}>
+          <BannerButton aria-label="Accept">
             Accept
           </BannerButton>
         </BannerContainer>
