@@ -1,0 +1,3 @@
+import { _ as _extends_1 } from '../node_modules/@babel/runtime/helpers/extends.js';
+export { _ as default } from '../node_modules/@babel/runtime/helpers/extends.js';
+//# sourceMappingURL=extends.js_commonjs-proxy.map

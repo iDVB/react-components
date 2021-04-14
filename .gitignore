@@ -72,8 +72,5 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
-# build folders
-dist
-
 # ide - intelij idea
 .idea
