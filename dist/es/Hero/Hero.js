@@ -2,7 +2,6 @@ import { objectWithoutProperties as _objectWithoutProperties, taggedTemplateLite
 import React from 'react';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
-import { GatsbyImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import { reduceImages } from '../_common/utils.js';
 
@@ -78,7 +77,7 @@ var Overlay = styled.div(_templateObject3 || (_templateObject3 = _taggedTemplate
   var theme = _ref2.theme;
   return theme.palette.background["default"];
 });
-var StyledImg = styled(GatsbyImage)(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  height: 100%;\n"])));
+var StyledImg = styled.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  height: 100%;\n"])));
 
 export default Hero;
 //# sourceMappingURL=Hero.js.map

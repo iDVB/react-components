@@ -1,7 +1,7 @@
 import React from 'react'
 import Box from '@material-ui/core/Box'
 import Container from '@material-ui/core/Container'
-import { GatsbyImage } from 'gatsby-plugin-image'
+// import { GatsbyImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 
 import { reduceImages } from '../_common/utils'
@@ -101,7 +101,7 @@ const Overlay = styled.div`
   opacity: 0.3;
 `
 
-const StyledImg = styled(GatsbyImage)`
+const StyledImg = styled.div`
   height: 100%;
 `
 
