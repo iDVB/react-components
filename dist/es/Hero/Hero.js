@@ -9,21 +9,15 @@ var _templateObject, _templateObject2, _templateObject3, _templateObject4;
 var Hero = function Hero(props) {
   props.imageQuery;
       props.imageFilename;
-      var _props$objectPosition = props.objectPosition,
-      objectPosition = _props$objectPosition === void 0 ? '50% 100%' : _props$objectPosition,
-      _props$heading = props.heading,
+      props.objectPosition;
+      var _props$heading = props.heading,
       heading = _props$heading === void 0 ? 'Put Heading Here' : _props$heading,
       overlay = props.overlay;
       props.size;
       props.minHeight;
       _objectWithoutProperties(props, ["imageQuery", "imageFilename", "objectPosition", "heading", "overlay", "size", "minHeight"]);
 
-  return /*#__PURE__*/React.createElement("div", null, overlay && /*#__PURE__*/React.createElement(Overlay, null), /*#__PURE__*/React.createElement(ImgHolder, null, /*#__PURE__*/React.createElement(StyledImg, {
-    image: imgSources,
-    objectFit: "cover",
-    objectPosition: objectPosition,
-    alt: ""
-  })), /*#__PURE__*/React.createElement(Container, {
+  return /*#__PURE__*/React.createElement("div", null, overlay && /*#__PURE__*/React.createElement(Overlay, null), /*#__PURE__*/React.createElement(ImgHolder, null, /*#__PURE__*/React.createElement(StyledImg, null)), /*#__PURE__*/React.createElement(Container, {
     maxWidth: "lg"
   }, /*#__PURE__*/React.createElement(Box, {
     position: "relative",

@@ -19,12 +19,7 @@ const Hero = (props) => {
     <div>
       {overlay && <Overlay />}
       <ImgHolder>
-        <StyledImg
-          image={imgSources}
-          objectFit="cover"
-          objectPosition={objectPosition}
-          alt=""
-        />
+        <StyledImg />
       </ImgHolder>
       <Container maxWidth="lg">
         <Box
