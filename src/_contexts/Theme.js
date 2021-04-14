@@ -8,20 +8,6 @@ import {
 import _merge from 'lodash/merge'
 import { ThemeProvider as ScThemeProvider } from 'styled-components'
 
-// NOTE: The paths below are what will be required post-build in the dist folder, and does not represent the path as it appears in /src
-const klickBoldWoff = require('../_assets/fonts/Klick-Bold/Klick-Bold.woff')
-  .default
-const klickBoldWoff2 = require('../_assets/fonts/Klick-Bold/Klick-Bold.woff2')
-  .default
-const PublicaSansRegularWoff = require('../_assets/fonts/PublicaSans/PublicaSans-Regular.woff')
-  .default
-const PublicaSansRegularWoff2 = require('../_assets/fonts/PublicaSans/PublicaSans-Regular.woff2')
-  .default
-const PublicaSansMediumWoff = require('../_assets/fonts/PublicaSans/PublicaSans-Medium.woff')
-  .default
-const PublicaSansMediumWoff2 = require('../_assets/fonts/PublicaSans/PublicaSans-Medium.woff2')
-  .default
-
 export const brandColors = {
   klick: '#0343fb',
   consulting: '#993399',
@@ -40,40 +26,6 @@ export const brandStyles = {
   appliedsciences: { palette: { primary: brandColors.appliedsciences } },
   ventures: { palette: { primary: brandColors.ventures } },
   careers: { palette: { primary: brandColors.careers } },
-}
-
-const PublicaSansRegular = {
-  fontFamily: 'PublicaSans',
-  fontStyle: 'normal',
-  fontDisplay: 'swap',
-  fontWeight: 400,
-  src: `
-    local('PublicaSans-Regular'),
-    url(${PublicaSansRegularWoff2}) format('woff2'),
-    url('${PublicaSansRegularWoff}') format('woff');
-  `,
-}
-const PublicaSansMedium = {
-  fontFamily: 'PublicaSans',
-  fontStyle: 'normal',
-  fontDisplay: 'swap',
-  fontWeight: 700,
-  src: `
-    local('PublicaSans-Medium'),
-    url(${PublicaSansMediumWoff2}) format('woff2'),
-    url('${PublicaSansMediumWoff}') format('woff');
-  `,
-}
-const KlickBold = {
-  fontFamily: 'KlickBold',
-  fontStyle: 'normal',
-  fontDisplay: 'swap',
-  fontWeight: 400,
-  src: `
-    local('KlickBold'),
-    url(${klickBoldWoff2}) format('woff2'),
-    url('${klickBoldWoff}') format('woff');
-  `,
 }
 
 const getThemeBaseline = () => ({
@@ -174,13 +126,6 @@ const getThemeBaseline = () => ({
   },
   shape: {
     borderRadius: 0,
-  },
-  overrides: {
-    MuiCssBaseline: {
-      '@global': {
-        '@font-face': [PublicaSansRegular, PublicaSansMedium, KlickBold],
-      },
-    },
   },
 })
 
