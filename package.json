@@ -1,0 +1,76 @@
+{
+  "name": "react-components",
+  "version": "4.37.1",
+  "main": "dist/es/index.js",
+  "module": "dist/es/index.js",
+  "sideEffects": "false",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:iDVB/react-components.git"
+  },
+  "scripts": {
+    "dev": "yarn build --watch",
+    "build": "NODE_ENV=production BABEL_ENV=production rollup -c"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-scroll-lock": "^3.1.5",
+    "gatsby-plugin-google-gtag": "^3.1.0",
+    "nanoid": "^3.1.22",
+    "xml2js": "^0.4.23"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "@reach/router": "^1.2.1",
+    "@rollup/plugin-commonjs": "^15.1.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-url": "^5.0.1",
+    "babel-plugin-styled-components": "1.10.5",
+    "babel-preset-react-app": "^9.1.2",
+    "formik": "^2.2.0",
+    "rollup": "^2.35.1",
+    "rollup-plugin-analyzer": "^3.3.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-copy": "^3.3.0",
+    "rollup-plugin-peer-deps-external": "^2.2.3",
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/system": "^4.11.2",
+    "gatsby": "^3.1.1",
+    "gatsby-plugin-image": "^1.2.1",
+    "gsap": "^3.5.1",
+    "lodash": "^4.17.20",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "react-intersection-observer": "^8.31.0",
+    "react-portal": "^4.2.1",
+    "react-use": "^17.2.1",
+    "styled-components": "5.2.0"
+  },
+  "peerDependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/system": "^4.11.2",
+    "@reach/router": "^1.2.1",
+    "formik": "^2.2.0",
+    "gatsby": "^3.2.1",
+    "gatsby-plugin-image": "^1.2.1",
+    "gsap": "^3.5.1",
+    "lodash": "^4.17.20",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "react-intersection-observer": "^8.31.0",
+    "react-portal": "^4.2.1",
+    "react-use": "^17.2.3",
+    "styled-components": "5.2.0"
+  }
+}
