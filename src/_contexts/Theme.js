@@ -45,26 +45,11 @@ const getThemeBaseline = () => ({
     },
   },
   typography: {
-    fontFamily: "'PublicaSans', Verdana, sans-serif",
-    fontFamilyKlickBold: "'KlickBold', sans-serif",
-    fontPaths: {
-      klickBoldWoff2,
-      klickBoldWoff,
-      PublicaSansMediumWoff2,
-      PublicaSansMediumWoff,
-      PublicaSansRegularWoff2,
-      PublicaSansRegularWoff,
-    },
-    font: {
-      primary: "'PublicaSans', Verdana, sans-serif",
-      secondary: "'KlickBold', sans-serif",
-    },
     button: {
       textTransform: 'none',
       fontWeight: 700,
     },
     h1: {
-      fontFamily: "'KlickBold', sans-serif",
       fontSize: '8.4rem',
       fontWeight: 400,
       lineHeight: 1.1,
@@ -72,7 +57,6 @@ const getThemeBaseline = () => ({
       marginBottom: '0.3em',
     },
     h2: {
-      fontFamily: "'KlickBold', sans-serif",
       fontSize: '4.5652rem',
       fontWeight: 400,
       lineHeight: 1.1,
@@ -80,7 +64,6 @@ const getThemeBaseline = () => ({
       marginBottom: '0.6em',
     },
     h3: {
-      fontFamily: "'PublicaSans', Verdana, sans-serif",
       fontWeight: 700,
       fontSize: '3.7003rem',
       lineHeight: 1.1666,
@@ -88,7 +71,6 @@ const getThemeBaseline = () => ({
       marginBottom: '0.6666em',
     },
     h4: {
-      fontFamily: "'PublicaSans', Verdana, sans-serif",
       fontSize: '2.8354rem',
       fontWeight: 700,
       lineHeight: 1.2333,
@@ -96,7 +78,6 @@ const getThemeBaseline = () => ({
       marginBottom: '0.7333em',
     },
     h5: {
-      fontFamily: "'PublicaSans', Verdana, sans-serif",
       fontSize: '1.9706rem',
       fontWeight: 700,
       lineHeight: 1.3,
@@ -104,7 +85,6 @@ const getThemeBaseline = () => ({
       marginBottom: '0.8em',
     },
     h6: {
-      fontFamily: "'PublicaSans', Verdana, sans-serif",
       fontSize: '1.1057rem',
       fontWeight: 700,
       lineHeight: 1.3666,
