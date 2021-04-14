@@ -39,8 +39,6 @@ const CookieBanner = () => {
 }
 
 function CookieDialog() {
-
-
   const [tempHasConsent, setTempHasConsent] = React.useState(true)
 
   function toggleTemporaryCookiesState() {
@@ -94,10 +92,6 @@ function CookieDialog() {
       />
     </div>
   )
-}
-
-async function sleep(ms) {
-  await new Promise((resolve) => setTimeout(resolve, ms))
 }
 
 const IOSStyleSwitch = withStyles((theme) => {
