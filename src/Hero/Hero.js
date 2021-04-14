@@ -6,7 +6,6 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import { reduceImages } from '../_common/utils'
-import { match } from '../_contexts/Theme'
 import Section from '../Section/Section'
 import { Heading } from '../Typography/Typography'
 
@@ -46,18 +45,7 @@ const Hero = (props) => {
   } = props
 
   const imagesLandscape = reduceImages(imageQuery.landscape.edges)
-  const imagesPortrait = imageQuery?.portrait?.edges
-    ? reduceImages(imageQuery.portrait.edges)
-    : undefined
-
-  const imgSources = imagesPortrait
-    ? withArtDirection(imagesLandscape[imageFilename], [
-        {
-          media: match.getQuery('isXS'),
-          image: imagesPortrait[imageFilename],
-        },
-      ])
-    : imagesLandscape[imageFilename]
+  const imgSources = imagesLandscape[imageFilename]
 
   const actualMinHeight = minHeight ?? sizeLookup[size]
 

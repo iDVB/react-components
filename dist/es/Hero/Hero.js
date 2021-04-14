@@ -2,11 +2,10 @@ import { objectWithoutProperties as _objectWithoutProperties, extends as _extend
 import React from 'react';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
-import { withArtDirection, GatsbyImage } from 'gatsby-plugin-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { reduceImages } from '../_common/utils.js';
-import { match } from '../_contexts/Theme.js';
 import Section from '../Section/Section.js';
 import { Heading } from '../Typography/Typography.js';
 
@@ -34,8 +33,6 @@ var MAIN_NAV_OFFSET = {
 };
 
 var Hero = function Hero(props) {
-  var _imageQuery$portrait;
-
   var imageQuery = props.imageQuery,
       _props$imageFilename = props.imageFilename,
       imageFilename = _props$imageFilename === void 0 ? 'image-filename' : _props$imageFilename,
@@ -50,11 +47,7 @@ var Hero = function Hero(props) {
       rest = _objectWithoutProperties(props, ["imageQuery", "imageFilename", "objectPosition", "heading", "overlay", "size", "minHeight"]);
 
   var imagesLandscape = reduceImages(imageQuery.landscape.edges);
-  var imagesPortrait = imageQuery !== null && imageQuery !== void 0 && (_imageQuery$portrait = imageQuery.portrait) !== null && _imageQuery$portrait !== void 0 && _imageQuery$portrait.edges ? reduceImages(imageQuery.portrait.edges) : undefined;
-  var imgSources = imagesPortrait ? withArtDirection(imagesLandscape[imageFilename], [{
-    media: match.getQuery('isXS'),
-    image: imagesPortrait[imageFilename]
-  }]) : imagesLandscape[imageFilename];
+  var imgSources = imagesLandscape[imageFilename];
   var actualMinHeight = minHeight !== null && minHeight !== void 0 ? minHeight : sizeLookup[size];
   return /*#__PURE__*/React.createElement(Section, _extends({}, rest, {
     pt: 0,
