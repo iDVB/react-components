@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 import { Box, FormControlLabel, withStyles, Switch } from '@material-ui/core';
 import styled from 'styled-components';
 import { useConsentContext } from '../_contexts/Consent.js';
-import ThemeProvider, { match } from '../_contexts/Theme.js';
 import Button from '../Button/Button.js';
 import ResponsiveDialog from '../Dialog/Dialog.js';
 import { Heading, P } from '../Typography/Typography.js';
@@ -38,9 +37,7 @@ var CookieBanner = function CookieBanner() {
   }
 
   if (!isMounted) return null;
-  return /*#__PURE__*/ReactDOM.createPortal( /*#__PURE__*/React.createElement(ThemeProvider, {
-    themeType: "onBlack"
-  }, /*#__PURE__*/React.createElement(Banner, {
+  return /*#__PURE__*/ReactDOM.createPortal( /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Banner, {
     isClosed: !isCookieBannerVisible
   }, /*#__PURE__*/React.createElement(BannerContainer, null, /*#__PURE__*/React.createElement(BannerCopy, {
     variant: "body2"
@@ -103,9 +100,7 @@ function CookieDialog() {
     closeCookiesBanner();
   };
 
-  return /*#__PURE__*/React.createElement(ThemeProvider, {
-    themeType: "onBlack"
-  }, /*#__PURE__*/React.createElement(ResponsiveDialog, {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(ResponsiveDialog, {
     open: isCookieModalVisible,
     disableBackdropClick: true,
     onClose: cancelAndClose,
@@ -231,11 +226,11 @@ var Banner = styled.div(_templateObject || (_templateObject = _taggedTemplateLit
   var isClosed = _ref4.isClosed;
   return isClosed ? 'translateY(500px)' : 'translateY(0)';
 });
-var BannerContainer = styled.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  margin: 0;\n  padding: 20px;\n\n  ", " {\n    display: flex;\n    align-items: center;\n    padding: 20px;\n  }\n\n  ", " {\n    margin: 0 7.5%;\n    padding: 20px 0;\n  }\n"])), match.isSM, match.isMD);
-var BannerCopy = styled(P)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  margin: 0 0 20px 0;\n  padding: 0;\n\n  ", " {\n    flex: 1 1 auto;\n    margin: 0 20px 0 0;\n  }\n"])), match.isSM);
+var BannerContainer = styled.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  margin: 0;\n  padding: 20px;\n\n  @media (min-width: 600px) {\n    display: flex;\n    align-items: center;\n    padding: 20px;\n  }\n\n  @media (min-width: 960px) {\n    margin: 0 7.5%;\n    padding: 20px 0;\n  }\n"])));
+var BannerCopy = styled(P)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  margin: 0 0 20px 0;\n  padding: 0;\n\n  @media (min-width: 600px) {\n    flex: 1 1 auto;\n    margin: 0 20px 0 0;\n  }\n"])));
 var BannerTextButton = styled.button(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  color: #ffffff;\n  background: none;\n  border: none;\n  text-decoration: underline;\n"]))); // TODO: use Button from klick react-components package
 
-var BannerButton = styled.button(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  margin: 0;\n  padding: 20px 10px;\n  font-weight: bold;\n  text-align: center;\n  width: 100%;\n  color: #000000;\n  background-color: #ffffff;\n  border: 1px solid #ffffff;\n  cursor: pointer;\n\n  ", " {\n    padding: 10px;\n    flex: 0 0 100px;\n  }\n"])), match.isSM);
+var BannerButton = styled.button(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  margin: 0;\n  padding: 20px 10px;\n  font-weight: bold;\n  text-align: center;\n  width: 100%;\n  color: #000000;\n  background-color: #ffffff;\n  border: 1px solid #ffffff;\n  cursor: pointer;\n\n  @media (min-width: 600px) {\n    padding: 10px;\n    flex: 0 0 100px;\n  }\n"])));
 
 export default CookieBanner;
 //# sourceMappingURL=CookieBanner.js.map

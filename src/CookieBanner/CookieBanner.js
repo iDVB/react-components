@@ -4,7 +4,6 @@ import { Box, FormControlLabel, Switch, withStyles } from '@material-ui/core'
 import styled from 'styled-components'
 
 import { useConsentContext } from '../_contexts/Consent'
-import ThemeProvider, { match } from '../_contexts/Theme'
 import Button from '../Button/Button'
 import Dialog from '../Dialog/Dialog'
 import { Heading, P } from '../Typography/Typography'
@@ -37,7 +36,7 @@ const CookieBanner = () => {
   if (!isMounted) return null
 
   return ReactDOM.createPortal(
-    <ThemeProvider themeType="onBlack">
+    <div>
       <Banner isClosed={!isCookieBannerVisible}>
         <BannerContainer>
           <BannerCopy variant="body2">
@@ -54,7 +53,7 @@ const CookieBanner = () => {
         </BannerContainer>
       </Banner>
       <CookieDialog />
-    </ThemeProvider>,
+    </div>,
     document.body
   )
 }
@@ -93,7 +92,7 @@ function CookieDialog() {
   }
 
   return (
-    <ThemeProvider themeType="onBlack">
+    <div>
       <Dialog
         open={isCookieModalVisible}
         disableBackdropClick
@@ -138,7 +137,7 @@ function CookieDialog() {
           </>
         }
       />
-    </ThemeProvider>
+    </div>
   )
 }
 
@@ -230,13 +229,13 @@ const BannerContainer = styled.div`
   margin: 0;
   padding: 20px;
 
-  ${match.isSM} {
+  @media (min-width: 600px) {
     display: flex;
     align-items: center;
     padding: 20px;
   }
 
-  ${match.isMD} {
+  @media (min-width: 960px) {
     margin: 0 7.5%;
     padding: 20px 0;
   }
@@ -246,7 +245,7 @@ const BannerCopy = styled(P)`
   margin: 0 0 20px 0;
   padding: 0;
 
-  ${match.isSM} {
+  @media (min-width: 600px) {
     flex: 1 1 auto;
     margin: 0 20px 0 0;
   }
@@ -271,7 +270,7 @@ const BannerButton = styled.button`
   border: 1px solid #ffffff;
   cursor: pointer;
 
-  ${match.isSM} {
+  @media (min-width: 600px) {
     padding: 10px;
     flex: 0 0 100px;
   }
