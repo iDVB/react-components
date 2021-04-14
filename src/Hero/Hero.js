@@ -1,13 +1,10 @@
 import React from 'react'
 import Box from '@material-ui/core/Box'
 import Container from '@material-ui/core/Container'
-import { GatsbyImage, withArtDirection } from 'gatsby-plugin-image'
-import PropTypes from 'prop-types'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 
 import { reduceImages } from '../_common/utils'
-import Section from '../Section/Section'
-import { Heading } from '../Typography/Typography'
 
 const sizeLookup = {
   small: {
@@ -50,7 +47,7 @@ const Hero = (props) => {
   const actualMinHeight = minHeight ?? sizeLookup[size]
 
   return (
-    <Section {...rest} pt={0} pb={0}>
+    <div>
       {overlay && <Overlay />}
       <ImgHolder>
         <StyledImg
@@ -76,7 +73,7 @@ const Hero = (props) => {
           <StyledHeading variant="h1">{heading}</StyledHeading>
         </Box>
       </Container>
-    </Section>
+    </div>
   )
 }
 
@@ -107,13 +104,5 @@ const Overlay = styled.div`
 const StyledImg = styled(GatsbyImage)`
   height: 100%;
 `
-
-Hero.propTypes = {
-  heading: PropTypes.string,
-  imageFilename: PropTypes.string,
-  imageQuery: PropTypes.object,
-  bgColor: PropTypes.string,
-  objectPosition: PropTypes.string,
-}
 
 export default Hero

@@ -1,13 +1,10 @@
-import { objectWithoutProperties as _objectWithoutProperties, extends as _extends, taggedTemplateLiteral as _taggedTemplateLiteral } from '../_virtual/_rollupPluginBabelHelpers.js';
+import { objectWithoutProperties as _objectWithoutProperties, taggedTemplateLiteral as _taggedTemplateLiteral } from '../_virtual/_rollupPluginBabelHelpers.js';
 import React from 'react';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { reduceImages } from '../_common/utils.js';
-import Section from '../Section/Section.js';
-import { Heading } from '../Typography/Typography.js';
 
 var _templateObject, _templateObject2, _templateObject3, _templateObject4;
 var sizeLookup = {
@@ -43,16 +40,13 @@ var Hero = function Hero(props) {
       overlay = props.overlay,
       _props$size = props.size,
       size = _props$size === void 0 ? 'medium' : _props$size,
-      minHeight = props.minHeight,
-      rest = _objectWithoutProperties(props, ["imageQuery", "imageFilename", "objectPosition", "heading", "overlay", "size", "minHeight"]);
+      minHeight = props.minHeight;
+      _objectWithoutProperties(props, ["imageQuery", "imageFilename", "objectPosition", "heading", "overlay", "size", "minHeight"]);
 
   var imagesLandscape = reduceImages(imageQuery.landscape.edges);
   var imgSources = imagesLandscape[imageFilename];
   var actualMinHeight = minHeight !== null && minHeight !== void 0 ? minHeight : sizeLookup[size];
-  return /*#__PURE__*/React.createElement(Section, _extends({}, rest, {
-    pt: 0,
-    pb: 0
-  }), overlay && /*#__PURE__*/React.createElement(Overlay, null), /*#__PURE__*/React.createElement(ImgHolder, null, /*#__PURE__*/React.createElement(StyledImg, {
+  return /*#__PURE__*/React.createElement("div", null, overlay && /*#__PURE__*/React.createElement(Overlay, null), /*#__PURE__*/React.createElement(ImgHolder, null, /*#__PURE__*/React.createElement(StyledImg, {
     image: imgSources,
     objectFit: "cover",
     objectPosition: objectPosition,
@@ -85,13 +79,6 @@ var Overlay = styled.div(_templateObject3 || (_templateObject3 = _taggedTemplate
   return theme.palette.background["default"];
 });
 var StyledImg = styled(GatsbyImage)(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  height: 100%;\n"])));
-Hero.propTypes = {
-  heading: PropTypes.string,
-  imageFilename: PropTypes.string,
-  imageQuery: PropTypes.object,
-  bgColor: PropTypes.string,
-  objectPosition: PropTypes.string
-};
 
 export default Hero;
 //# sourceMappingURL=Hero.js.map
