@@ -1,43 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Box, FormControlLabel, Switch, withStyles } from '@material-ui/core'
+import { Box, FormControlLabel, Switch, withStyles, Button } from '@material-ui/core'
 import styled from 'styled-components'
 
-import { useConsentContext } from '../_contexts/Consent'
-import Button from '../Button/Button'
 import Dialog from '../Dialog/Dialog'
 import { Heading, P } from '../Typography/Typography'
 
 const CookieBanner = () => {
-  const {
-    acceptCookies,
-    isPristine,
-    isCookieBannerVisible,
-    showCookiesBanner,
-    showCookiesModal,
-    closeCookiesBanner,
-  } = useConsentContext()
-
   const [isMounted, setIsMounted] = React.useState()
 
   React.useEffect(() => {
     setIsMounted(true)
   }, [])
 
-  React.useEffect(() => {
-    if (isPristine) showCookiesBanner()
-  }, [isPristine, showCookiesBanner])
-
-  function accept() {
-    acceptCookies()
-    closeCookiesBanner()
-  }
-
   if (!isMounted) return null
 
   return ReactDOM.createPortal(
     <div>
-      <Banner isClosed={!isCookieBannerVisible}>
+      <Banner isClosed={false}>
         <BannerContainer>
           <BannerCopy variant="body2">
             We use cookies and other tracking technologies to assist with
@@ -59,44 +39,19 @@ const CookieBanner = () => {
 }
 
 function CookieDialog() {
-  const {
-    hasConsent,
-    acceptCookies,
-    rejectCookies,
-    isCookieModalVisible,
-    closeCookiesModal,
-    closeCookiesBanner,
-  } = useConsentContext()
 
-  const [tempHasConsent, setTempHasConsent] = React.useState(hasConsent)
 
-  const cancelAndClose = React.useCallback(
-    async function () {
-      setTempHasConsent(hasConsent)
-      if (hasConsent !== tempHasConsent) {
-        // Note: This gives a small delay so that you can see the settings will revert on cancel.
-        await sleep(350)
-      }
-      closeCookiesModal()
-    },
-    [hasConsent, tempHasConsent, setTempHasConsent, closeCookiesModal]
-  )
+  const [tempHasConsent, setTempHasConsent] = React.useState(true)
 
   function toggleTemporaryCookiesState() {
     setTempHasConsent((state) => !state)
   }
 
-  const saveSettings = () => {
-    tempHasConsent ? acceptCookies() : rejectCookies()
-    closeCookiesBanner()
-  }
-
   return (
     <div>
       <Dialog
-        open={isCookieModalVisible}
+        open={false}
         disableBackdropClick
-        onClose={cancelAndClose}
         dialogTitle={
           <Heading variant="h5" component="h2">
             Cookies at Klick.

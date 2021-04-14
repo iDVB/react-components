@@ -7,9 +7,6 @@ var getStorageItem = function getStorageItem(item) {
 var setStorageItem = function setStorageItem(item, value) {
   return typeof window !== 'undefined' && localStorage.setItem(item, value);
 };
-var removeStorageItem = function removeStorageItem(item) {
-  return typeof window !== 'undefined' && localStorage.removeItem(item);
-};
 
-export { getStorageItem, removeStorageItem, setStorageItem, storageItemExists };
+export { getStorageItem, setStorageItem, storageItemExists };
 //# sourceMappingURL=storageUtils.js.map

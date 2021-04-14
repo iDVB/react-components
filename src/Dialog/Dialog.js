@@ -9,7 +9,6 @@ import useMediaQuery from '@material-ui/core/useMediaQuery'
 import styled, { css } from 'styled-components'
 
 import { useModalContext } from '../_contexts/Modal'
-import { match } from '../_contexts/Theme'
 
 const defaultProps = {
   titleProps: {},
@@ -81,7 +80,7 @@ const StyledDialog = styled(Dialog)`
       background-color: ${theme.palette.background.default};
       /* padding: ${theme.spacing(5)}px ${theme.spacing(2)}px; */
 
-      ${match.isSM} {
+      @media (min-width: 600px) {
         /* padding: ${theme.spacing(7)}px; */
         border-right: 4px solid ${theme.palette.primary.main};
       }

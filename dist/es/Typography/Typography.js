@@ -3,7 +3,6 @@ import React, { forwardRef } from 'react';
 import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import { match } from '../_contexts/Theme.js';
 
 var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11;
 var StyledTypography = styled(Typography)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  &:last-child {\n    margin-bottom: 0;\n  }\n"]))); // HEADING
@@ -55,7 +54,7 @@ var DefaultP = /*#__PURE__*/forwardRef(function (props, ref) {
     color: color
   }, restProps));
 });
-var Blurb1 = styled(DefaultP)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  font-weight: 700;\n  font-size: 1.5625rem;\n  line-height: 1.235;\n\n  ", " {\n    font-size: 1.8219rem;\n  }\n\n  ", " {\n    font-size: 2.0243rem;\n  }\n"])), match.isSM, match.isMD);
+var Blurb1 = styled(DefaultP)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  font-weight: 700;\n  font-size: 1.5625rem;\n  line-height: 1.235;\n\n  @media (min-width: 600px) {\n    font-size: 1.8219rem;\n  }\n\n  @media (min-width: 960px) {\n    font-size: 2.0243rem;\n  }\n"])));
 var Blurb2 = styled(DefaultP)(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  font-weight: 400;\n  font-size: 1.25rem;\n  line-height: 1.6;\n"])));
 var customVariants = {
   blurb1: Blurb1,
