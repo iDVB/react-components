@@ -1,12 +1,9 @@
 import React from 'react'
 import Box from '@material-ui/core/Box'
 import Container from '@material-ui/core/Container'
-import { GatsbyImage, withArtDirection } from 'gatsby-plugin-image'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import { reduceImages } from '../_common/utils'
-import { match } from '../_contexts/Theme'
 import Section from '../Section/Section'
 import { Heading } from '../Typography/Typography'
 
@@ -45,33 +42,12 @@ const Hero = (props) => {
     ...rest
   } = props
 
-  const imagesLandscape = reduceImages(imageQuery.landscape.edges)
-  const imagesPortrait = imageQuery?.portrait?.edges
-    ? reduceImages(imageQuery.portrait.edges)
-    : undefined
-
-  const imgSources = imagesPortrait
-    ? withArtDirection(imagesLandscape[imageFilename], [
-        {
-          media: match.getQuery('isXS'),
-          image: imagesPortrait[imageFilename],
-        },
-      ])
-    : imagesLandscape[imageFilename]
-
   const actualMinHeight = minHeight ?? sizeLookup[size]
 
   return (
     <Section {...rest} pt={0} pb={0}>
       {overlay && <Overlay />}
-      <ImgHolder>
-        <StyledImg
-          image={imgSources}
-          objectFit="cover"
-          objectPosition={objectPosition}
-          alt=""
-        />
-      </ImgHolder>
+      <ImgHolder />
       <Container maxWidth="lg">
         <Box
           position="relative"
@@ -104,6 +80,7 @@ const ImgHolder = styled.div`
   width: 100%;
   height: 100%;
   z-index: 2;
+  background: black;
 `
 
 const Overlay = styled.div`
