@@ -1,4 +1,4 @@
-import { objectWithoutProperties as _objectWithoutProperties, taggedTemplateLiteral as _taggedTemplateLiteral } from '../_virtual/_rollupPluginBabelHelpers.js';
+import { taggedTemplateLiteral as _taggedTemplateLiteral } from '../_virtual/_rollupPluginBabelHelpers.js';
 import React from 'react';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
@@ -7,17 +7,9 @@ import styled from 'styled-components';
 var _templateObject, _templateObject2, _templateObject3, _templateObject4;
 
 var Hero = function Hero(props) {
-  props.imageQuery;
-      props.imageFilename;
-      props.objectPosition;
-      var _props$heading = props.heading,
-      heading = _props$heading === void 0 ? 'Put Heading Here' : _props$heading,
-      overlay = props.overlay;
-      props.size;
-      props.minHeight;
-      _objectWithoutProperties(props, ["imageQuery", "imageFilename", "objectPosition", "heading", "overlay", "size", "minHeight"]);
-
-  return /*#__PURE__*/React.createElement("div", null, overlay && /*#__PURE__*/React.createElement(Overlay, null), /*#__PURE__*/React.createElement(ImgHolder, null, /*#__PURE__*/React.createElement(StyledImg, null)), /*#__PURE__*/React.createElement(Container, {
+  var _props$heading = props.heading,
+      heading = _props$heading === void 0 ? 'Put Heading Here' : _props$heading;
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Overlay, null), /*#__PURE__*/React.createElement(ImgHolder, null, /*#__PURE__*/React.createElement(StyledImg, null)), /*#__PURE__*/React.createElement(Container, {
     maxWidth: "lg"
   }, /*#__PURE__*/React.createElement(Box, {
     position: "relative",

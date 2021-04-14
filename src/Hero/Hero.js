@@ -5,19 +5,12 @@ import styled from 'styled-components'
 
 const Hero = (props) => {
   const {
-    imageQuery,
-    imageFilename = 'image-filename',
-    objectPosition = '50% 100%',
     heading = 'Put Heading Here',
-    overlay,
-    size = 'medium',
-    minHeight,
-    ...rest
   } = props
 
   return (
     <div>
-      {overlay && <Overlay />}
+      <Overlay />
       <ImgHolder>
         <StyledImg />
       </ImgHolder>
