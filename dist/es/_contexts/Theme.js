@@ -4,18 +4,6 @@ import { useTheme, ThemeProvider as ThemeProvider$1, responsiveFontSizes, create
 import _merge from 'lodash/merge';
 import { ThemeProvider as ThemeProvider$2 } from 'styled-components';
 
-var klickBoldWoff = require('../_assets/fonts/Klick-Bold/Klick-Bold.woff')["default"];
-
-var klickBoldWoff2 = require('../_assets/fonts/Klick-Bold/Klick-Bold.woff2')["default"];
-
-var PublicaSansRegularWoff = require('../_assets/fonts/PublicaSans/PublicaSans-Regular.woff')["default"];
-
-var PublicaSansRegularWoff2 = require('../_assets/fonts/PublicaSans/PublicaSans-Regular.woff2')["default"];
-
-var PublicaSansMediumWoff = require('../_assets/fonts/PublicaSans/PublicaSans-Medium.woff')["default"];
-
-var PublicaSansMediumWoff2 = require('../_assets/fonts/PublicaSans/PublicaSans-Medium.woff2')["default"];
-
 var brandColors = {
   klick: '#0343fb',
   consulting: '#993399',
@@ -58,27 +46,6 @@ var brandStyles = {
     }
   }
 };
-var PublicaSansRegular = {
-  fontFamily: 'PublicaSans',
-  fontStyle: 'normal',
-  fontDisplay: 'swap',
-  fontWeight: 400,
-  src: "\n    local('PublicaSans-Regular'),\n    url(".concat(PublicaSansRegularWoff2, ") format('woff2'),\n    url('").concat(PublicaSansRegularWoff, "') format('woff');\n  ")
-};
-var PublicaSansMedium = {
-  fontFamily: 'PublicaSans',
-  fontStyle: 'normal',
-  fontDisplay: 'swap',
-  fontWeight: 700,
-  src: "\n    local('PublicaSans-Medium'),\n    url(".concat(PublicaSansMediumWoff2, ") format('woff2'),\n    url('").concat(PublicaSansMediumWoff, "') format('woff');\n  ")
-};
-var KlickBold = {
-  fontFamily: 'KlickBold',
-  fontStyle: 'normal',
-  fontDisplay: 'swap',
-  fontWeight: 400,
-  src: "\n    local('KlickBold'),\n    url(".concat(klickBoldWoff2, ") format('woff2'),\n    url('").concat(klickBoldWoff, "') format('woff');\n  ")
-};
 
 var getThemeBaseline = function getThemeBaseline() {
   return {
@@ -110,26 +77,11 @@ var getThemeBaseline = function getThemeBaseline() {
       }
     },
     typography: {
-      fontFamily: "'PublicaSans', Verdana, sans-serif",
-      fontFamilyKlickBold: "'KlickBold', sans-serif",
-      fontPaths: {
-        klickBoldWoff2: klickBoldWoff2,
-        klickBoldWoff: klickBoldWoff,
-        PublicaSansMediumWoff2: PublicaSansMediumWoff2,
-        PublicaSansMediumWoff: PublicaSansMediumWoff,
-        PublicaSansRegularWoff2: PublicaSansRegularWoff2,
-        PublicaSansRegularWoff: PublicaSansRegularWoff
-      },
-      font: {
-        primary: "'PublicaSans', Verdana, sans-serif",
-        secondary: "'KlickBold', sans-serif"
-      },
       button: {
         textTransform: 'none',
         fontWeight: 700
       },
       h1: {
-        fontFamily: "'KlickBold', sans-serif",
         fontSize: '8.4rem',
         fontWeight: 400,
         lineHeight: 1.1,
@@ -137,7 +89,6 @@ var getThemeBaseline = function getThemeBaseline() {
         marginBottom: '0.3em'
       },
       h2: {
-        fontFamily: "'KlickBold', sans-serif",
         fontSize: '4.5652rem',
         fontWeight: 400,
         lineHeight: 1.1,
@@ -145,7 +96,6 @@ var getThemeBaseline = function getThemeBaseline() {
         marginBottom: '0.6em'
       },
       h3: {
-        fontFamily: "'PublicaSans', Verdana, sans-serif",
         fontWeight: 700,
         fontSize: '3.7003rem',
         lineHeight: 1.1666,
@@ -153,7 +103,6 @@ var getThemeBaseline = function getThemeBaseline() {
         marginBottom: '0.6666em'
       },
       h4: {
-        fontFamily: "'PublicaSans', Verdana, sans-serif",
         fontSize: '2.8354rem',
         fontWeight: 700,
         lineHeight: 1.2333,
@@ -161,7 +110,6 @@ var getThemeBaseline = function getThemeBaseline() {
         marginBottom: '0.7333em'
       },
       h5: {
-        fontFamily: "'PublicaSans', Verdana, sans-serif",
         fontSize: '1.9706rem',
         fontWeight: 700,
         lineHeight: 1.3,
@@ -169,7 +117,6 @@ var getThemeBaseline = function getThemeBaseline() {
         marginBottom: '0.8em'
       },
       h6: {
-        fontFamily: "'PublicaSans', Verdana, sans-serif",
         fontSize: '1.1057rem',
         fontWeight: 700,
         lineHeight: 1.3666,
@@ -191,13 +138,6 @@ var getThemeBaseline = function getThemeBaseline() {
     },
     shape: {
       borderRadius: 0
-    },
-    overrides: {
-      MuiCssBaseline: {
-        '@global': {
-          '@font-face': [PublicaSansRegular, PublicaSansMedium, KlickBold]
-        }
-      }
     }
   };
 };
