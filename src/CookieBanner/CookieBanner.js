@@ -23,7 +23,7 @@ const CookieBanner = () => {
             We use cookies and other tracking technologies to assist with
             navigation, analyze your use of our services, and assist with our
             promotional and marketing efforts.{' '}
-            <BannerTextButton onClick={showCookiesModal}>
+            <BannerTextButton>
               View cookie options
             </BannerTextButton>
           </BannerCopy>
