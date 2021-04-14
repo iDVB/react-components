@@ -1,7 +1,6 @@
 import React from 'react'
 import Box from '@material-ui/core/Box'
 import Container from '@material-ui/core/Container'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import Section from '../Section/Section'
@@ -92,17 +91,5 @@ const Overlay = styled.div`
   z-index: 3;
   opacity: 0.3;
 `
-
-const StyledImg = styled(GatsbyImage)`
-  height: 100%;
-`
-
-Hero.propTypes = {
-  heading: PropTypes.string,
-  imageFilename: PropTypes.string,
-  imageQuery: PropTypes.object,
-  bgColor: PropTypes.string,
-  objectPosition: PropTypes.string,
-}
 
 export default Hero

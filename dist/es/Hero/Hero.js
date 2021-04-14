@@ -2,12 +2,11 @@ import { objectWithoutProperties as _objectWithoutProperties, extends as _extend
 import React from 'react';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Section from '../Section/Section.js';
 import { Heading } from '../Typography/Typography.js';
 
-var _templateObject, _templateObject2, _templateObject3, _templateObject4;
+var _templateObject, _templateObject2, _templateObject3;
 var sizeLookup = {
   small: {
     xs: 200,
@@ -73,14 +72,6 @@ var Overlay = styled.div(_templateObject3 || (_templateObject3 = _taggedTemplate
   var theme = _ref2.theme;
   return theme.palette.background["default"];
 });
-styled(GatsbyImage)(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  height: 100%;\n"])));
-Hero.propTypes = {
-  heading: PropTypes.string,
-  imageFilename: PropTypes.string,
-  imageQuery: PropTypes.object,
-  bgColor: PropTypes.string,
-  objectPosition: PropTypes.string
-};
 
 export default Hero;
 //# sourceMappingURL=Hero.js.map
