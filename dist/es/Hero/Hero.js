@@ -69,7 +69,7 @@ var Hero = function Hero(props) {
   }, heading))));
 };
 
-var StyledHeading = styled(Heading)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  position: relative;\n  margin: 0;\n  color: ", ";\n  z-index: 2;\n"])), function (_ref) {
+var StyledHeading = styled.h1(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  position: relative;\n  margin: 0;\n  color: ", ";\n  z-index: 2;\n"])), function (_ref) {
   var theme = _ref.theme;
   return theme.palette.text.primary;
 });

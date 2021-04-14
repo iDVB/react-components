@@ -77,7 +77,7 @@ const Hero = (props) => {
   )
 }
 
-const StyledHeading = styled(Heading)`
+const StyledHeading = styled.h1`
   position: relative;
   margin: 0;
   color: ${({ theme }) => theme.palette.text.primary};
