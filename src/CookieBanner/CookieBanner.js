@@ -7,15 +7,7 @@ import Dialog from '../Dialog/Dialog'
 import { Heading, P } from '../Typography/Typography'
 
 const CookieBanner = () => {
-  // const [isMounted, setIsMounted] = React.useState()
-
-  // React.useEffect(() => {
-  //   setIsMounted(true)
-  // }, [])
-
-  // if (!isMounted) return null
-
-  return ReactDOM.createPortal(
+  return (
     <div>
       <Banner isClosed={false}>
         <BannerContainer>
@@ -33,8 +25,7 @@ const CookieBanner = () => {
         </BannerContainer>
       </Banner>
       <CookieDialog />
-    </div>,
-    document.body
+    </div>
   )
 }
 

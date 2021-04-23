@@ -1,6 +1,6 @@
 import { slicedToArray as _slicedToArray, objectWithoutProperties as _objectWithoutProperties, extends as _extends, taggedTemplateLiteral as _taggedTemplateLiteral } from '../_virtual/_rollupPluginBabelHelpers.js';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import 'react-dom';
 import { Box, FormControlLabel, Button, withStyles, Switch } from '@material-ui/core';
 import styled from 'styled-components';
 import ResponsiveDialog from '../Dialog/Dialog.js';
@@ -9,18 +9,13 @@ import { Heading, P } from '../Typography/Typography.js';
 var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5;
 
 var CookieBanner = function CookieBanner() {
-  // const [isMounted, setIsMounted] = React.useState()
-  // React.useEffect(() => {
-  //   setIsMounted(true)
-  // }, [])
-  // if (!isMounted) return null
-  return /*#__PURE__*/ReactDOM.createPortal( /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Banner, {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Banner, {
     isClosed: false
   }, /*#__PURE__*/React.createElement(BannerContainer, null, /*#__PURE__*/React.createElement(BannerCopy, {
     variant: "body2"
   }, "We use cookies and other tracking technologies to assist with navigation, analyze your use of our services, and assist with our promotional and marketing efforts.", ' ', /*#__PURE__*/React.createElement(BannerTextButton, null, "View cookie options")), /*#__PURE__*/React.createElement(BannerButton, {
     "aria-label": "Accept"
-  }, "Accept"))), /*#__PURE__*/React.createElement(CookieDialog, null)), document.body);
+  }, "Accept"))), /*#__PURE__*/React.createElement(CookieDialog, null));
 };
 
 function CookieDialog() {
