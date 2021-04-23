@@ -2,7 +2,7 @@ import { extends as _extends, objectWithoutProperties as _objectWithoutPropertie
 import React, { forwardRef } from 'react';
 import { Link as Link$1 } from '@material-ui/core';
 import { Link } from 'gatsby';
-import { g as gatsbyPluginGoogleGtag } from '../node_modules/gatsby-plugin-google-gtag/index.js';
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import styled from 'styled-components';
 
 var _templateObject;
@@ -15,7 +15,7 @@ var ExternalLink = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var to = _ref.to,
       props = _objectWithoutProperties(_ref, ["to"]);
 
-  return /*#__PURE__*/React.createElement(gatsbyPluginGoogleGtag.OutboundLink, _extends({
+  return /*#__PURE__*/React.createElement(OutboundLink, _extends({
     ref: ref,
     href: to,
     target: "_blank",

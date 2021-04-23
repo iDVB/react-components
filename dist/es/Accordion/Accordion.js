@@ -2,7 +2,7 @@ import { extends as _extends, taggedTemplateLiteral as _taggedTemplateLiteral } 
 import React from 'react';
 import { fade, Accordion as Accordion$1, AccordionSummary, AccordionDetails } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { nanoid } from '../node_modules/nanoid/index.js';
+import { nanoid } from 'nanoid';
 import styled from 'styled-components';
 import { match } from '../_contexts/Theme.js';
 import { Heading, P } from '../Typography/Typography.js';

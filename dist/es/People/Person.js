@@ -3,7 +3,7 @@ import React, { forwardRef, useState, useRef } from 'react';
 import { Portal } from 'react-portal';
 import { useIsomorphicLayoutEffect } from 'react-use';
 import { Container } from '@material-ui/core';
-import { disableBodyScroll, clearAllBodyScrollLocks, enableBodyScroll } from '../node_modules/body-scroll-lock/lib/bodyScrollLock.esm.js';
+import { disableBodyScroll, clearAllBodyScrollLocks, enableBodyScroll } from 'body-scroll-lock';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { gsap } from 'gsap';
 import { ExpoScaleEase } from 'gsap/EasePack';

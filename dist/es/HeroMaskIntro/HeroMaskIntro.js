@@ -1,7 +1,7 @@
 import { objectWithoutProperties as _objectWithoutProperties, extends as _extends, taggedTemplateLiteral as _taggedTemplateLiteral } from '../_virtual/_rollupPluginBabelHelpers.js';
 import React, { useRef } from 'react';
 import { useIsomorphicLayoutEffect } from 'react-use';
-import { disableBodyScroll, enableBodyScroll } from '../node_modules/body-scroll-lock/lib/bodyScrollLock.esm.js';
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { gsap } from 'gsap';
 import { ExpoScaleEase } from 'gsap/EasePack';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';

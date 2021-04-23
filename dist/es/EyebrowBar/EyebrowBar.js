@@ -4,7 +4,7 @@ import { useIsomorphicLayoutEffect } from 'react-use';
 import { useMediaQuery, Box, Fade, AppBar, Container, Toolbar, Tabs, Tab, fade } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import { MoreVert, Cancel } from '@material-ui/icons';
-import { disableBodyScroll, enableBodyScroll } from '../node_modules/body-scroll-lock/lib/bodyScrollLock.esm.js';
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import styled from 'styled-components';
 import { tracking } from '../_common/tracking.js';
 import ThemeProvider, { match, brandColors } from '../_contexts/Theme.js';

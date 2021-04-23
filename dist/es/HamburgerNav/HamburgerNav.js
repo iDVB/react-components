@@ -4,7 +4,7 @@ import { IconButton, Portal, Container, Box, Toolbar, MenuList } from '@material
 import { makeStyles } from '@material-ui/core/styles';
 import { darken } from '@material-ui/core/styles/colorManipulator';
 import { Menu, Close } from '@material-ui/icons';
-import { disableBodyScroll, enableBodyScroll } from '../node_modules/body-scroll-lock/lib/bodyScrollLock.esm.js';
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import ThemeProvider from '../_contexts/Theme.js';
 import Copyright from '../Copyright/Copyright.js';
 import KlickLogo from '../KlickLogo/KlickLogo.js';
