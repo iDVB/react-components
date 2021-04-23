@@ -1,0 +1,3 @@
+import isLength_1 from '../node_modules/lodash/isLength.js';
+export { default } from '../node_modules/lodash/isLength.js';
+//# sourceMappingURL=isLength.js_commonjs-proxy.map

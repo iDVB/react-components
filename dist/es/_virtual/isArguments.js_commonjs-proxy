@@ -1,0 +1,3 @@
+import isArguments_1 from '../node_modules/lodash/isArguments.js';
+export { default } from '../node_modules/lodash/isArguments.js';
+//# sourceMappingURL=isArguments.js_commonjs-proxy.map

@@ -1,0 +1,3 @@
+import _apply from '../node_modules/lodash/_apply.js';
+export { default } from '../node_modules/lodash/_apply.js';
+//# sourceMappingURL=_apply.js_commonjs-proxy.map

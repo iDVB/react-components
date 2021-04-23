@@ -1,0 +1,3 @@
+import toPlainObject_1 from '../node_modules/lodash/toPlainObject.js';
+export { default } from '../node_modules/lodash/toPlainObject.js';
+//# sourceMappingURL=toPlainObject.js_commonjs-proxy.map

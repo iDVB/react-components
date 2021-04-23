@@ -1,0 +1,3 @@
+import _stackClear from '../node_modules/lodash/_stackClear.js';
+export { default } from '../node_modules/lodash/_stackClear.js';
+//# sourceMappingURL=_stackClear.js_commonjs-proxy.map

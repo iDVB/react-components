@@ -1,0 +1,3 @@
+import _defineProperty from '../node_modules/lodash/_defineProperty.js';
+export { default } from '../node_modules/lodash/_defineProperty.js';
+//# sourceMappingURL=_defineProperty.js_commonjs-proxy.map

@@ -1,0 +1,3 @@
+import _setToString from '../node_modules/lodash/_setToString.js';
+export { default } from '../node_modules/lodash/_setToString.js';
+//# sourceMappingURL=_setToString.js_commonjs-proxy.map

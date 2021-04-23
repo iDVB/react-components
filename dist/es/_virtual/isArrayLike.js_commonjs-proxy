@@ -1,0 +1,3 @@
+import isArrayLike_1 from '../node_modules/lodash/isArrayLike.js';
+export { default } from '../node_modules/lodash/isArrayLike.js';
+//# sourceMappingURL=isArrayLike.js_commonjs-proxy.map

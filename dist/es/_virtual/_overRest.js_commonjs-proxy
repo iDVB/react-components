@@ -1,0 +1,3 @@
+import _overRest from '../node_modules/lodash/_overRest.js';
+export { default } from '../node_modules/lodash/_overRest.js';
+//# sourceMappingURL=_overRest.js_commonjs-proxy.map

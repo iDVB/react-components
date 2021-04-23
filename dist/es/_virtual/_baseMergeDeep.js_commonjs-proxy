@@ -1,0 +1,3 @@
+import _baseMergeDeep from '../node_modules/lodash/_baseMergeDeep.js';
+export { default } from '../node_modules/lodash/_baseMergeDeep.js';
+//# sourceMappingURL=_baseMergeDeep.js_commonjs-proxy.map

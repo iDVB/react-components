@@ -1,0 +1,3 @@
+import isArrayLikeObject_1 from '../node_modules/lodash/isArrayLikeObject.js';
+export { default } from '../node_modules/lodash/isArrayLikeObject.js';
+//# sourceMappingURL=isArrayLikeObject.js_commonjs-proxy.map

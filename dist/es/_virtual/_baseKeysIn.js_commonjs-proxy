@@ -1,0 +1,3 @@
+import _baseKeysIn from '../node_modules/lodash/_baseKeysIn.js';
+export { default } from '../node_modules/lodash/_baseKeysIn.js';
+//# sourceMappingURL=_baseKeysIn.js_commonjs-proxy.map

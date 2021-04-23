@@ -1,0 +1,3 @@
+import _isIndex from '../node_modules/lodash/_isIndex.js';
+export { default } from '../node_modules/lodash/_isIndex.js';
+//# sourceMappingURL=_isIndex.js_commonjs-proxy.map

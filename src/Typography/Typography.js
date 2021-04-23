@@ -3,6 +3,8 @@ import Typography from '@material-ui/core/Typography'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 
+import { match } from '../_contexts/Theme'
+
 const StyledTypography = styled(Typography)`
   &:last-child {
     margin-bottom: 0;
@@ -69,11 +71,11 @@ const Blurb1 = styled(DefaultP)`
   font-size: 1.5625rem;
   line-height: 1.235;
 
-  @media (min-width: 600px) {
+  ${match.isSM} {
     font-size: 1.8219rem;
   }
 
-  @media (min-width: 960px) {
+  ${match.isMD} {
     font-size: 2.0243rem;
   }
 `

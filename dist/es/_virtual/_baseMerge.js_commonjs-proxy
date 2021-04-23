@@ -1,0 +1,3 @@
+import _baseMerge from '../node_modules/lodash/_baseMerge.js';
+export { default } from '../node_modules/lodash/_baseMerge.js';
+//# sourceMappingURL=_baseMerge.js_commonjs-proxy.map

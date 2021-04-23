@@ -1,0 +1,3 @@
+import _stackSet from '../node_modules/lodash/_stackSet.js';
+export { default } from '../node_modules/lodash/_stackSet.js';
+//# sourceMappingURL=_stackSet.js_commonjs-proxy.map

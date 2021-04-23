@@ -1,46 +1,103 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Box, FormControlLabel, Switch, withStyles, Button } from '@material-ui/core'
+import { Box, FormControlLabel, Switch, withStyles } from '@material-ui/core'
 import styled from 'styled-components'
 
+import { useConsentContext } from '../_contexts/Consent'
+import ThemeProvider, { match } from '../_contexts/Theme'
+import Button from '../Button/Button'
 import Dialog from '../Dialog/Dialog'
 import { Heading, P } from '../Typography/Typography'
 
 const CookieBanner = () => {
-  return (
-    <div>
-      <Banner isClosed={false}>
+  const {
+    acceptCookies,
+    isPristine,
+    isCookieBannerVisible,
+    showCookiesBanner,
+    showCookiesModal,
+    closeCookiesBanner,
+  } = useConsentContext()
+
+  const [isMounted, setIsMounted] = React.useState()
+
+  React.useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  React.useEffect(() => {
+    if (isPristine) showCookiesBanner()
+  }, [isPristine, showCookiesBanner])
+
+  function accept() {
+    acceptCookies()
+    closeCookiesBanner()
+  }
+
+  if (!isMounted) return null
+
+  return ReactDOM.createPortal(
+    <ThemeProvider themeType="onBlack">
+      <Banner isClosed={!isCookieBannerVisible}>
         <BannerContainer>
           <BannerCopy variant="body2">
             We use cookies and other tracking technologies to assist with
             navigation, analyze your use of our services, and assist with our
             promotional and marketing efforts.{' '}
-            <BannerTextButton>
+            <BannerTextButton onClick={showCookiesModal}>
               View cookie options
             </BannerTextButton>
           </BannerCopy>
-          <BannerButton aria-label="Accept">
+          <BannerButton aria-label="Accept" onClick={accept}>
             Accept
           </BannerButton>
         </BannerContainer>
       </Banner>
       <CookieDialog />
-    </div>
+    </ThemeProvider>,
+    document.body
   )
 }
 
 function CookieDialog() {
-  const [tempHasConsent, setTempHasConsent] = React.useState(true)
+  const {
+    hasConsent,
+    acceptCookies,
+    rejectCookies,
+    isCookieModalVisible,
+    closeCookiesModal,
+    closeCookiesBanner,
+  } = useConsentContext()
+
+  const [tempHasConsent, setTempHasConsent] = React.useState(hasConsent)
+
+  const cancelAndClose = React.useCallback(
+    async function () {
+      setTempHasConsent(hasConsent)
+      if (hasConsent !== tempHasConsent) {
+        // Note: This gives a small delay so that you can see the settings will revert on cancel.
+        await sleep(350)
+      }
+      closeCookiesModal()
+    },
+    [hasConsent, tempHasConsent, setTempHasConsent, closeCookiesModal]
+  )
 
   function toggleTemporaryCookiesState() {
     setTempHasConsent((state) => !state)
   }
 
+  const saveSettings = () => {
+    tempHasConsent ? acceptCookies() : rejectCookies()
+    closeCookiesBanner()
+  }
+
   return (
-    <div>
+    <ThemeProvider themeType="onBlack">
       <Dialog
-        open={false}
+        open={isCookieModalVisible}
         disableBackdropClick
+        onClose={cancelAndClose}
         dialogTitle={
           <Heading variant="h5" component="h2">
             Cookies at Klick.
@@ -58,6 +115,7 @@ function CookieDialog() {
                 control={
                   <IOSStyleSwitch
                     checked={tempHasConsent}
+                    onChange={toggleTemporaryCookiesState}
                     name="consent-toggle"
                     inputProps={{ 'aria-label': 'consent checkbox' }}
                   />
@@ -71,17 +129,21 @@ function CookieDialog() {
         }
         dialogActions={
           <>
-            <Button color="default">
+            <Button onClick={cancelAndClose} color="default">
               Cancel
             </Button>
-            <Button color="primary">
+            <Button onClick={saveSettings} color="primary">
               Save
             </Button>
           </>
         }
       />
-    </div>
+    </ThemeProvider>
   )
+}
+
+async function sleep(ms) {
+  await new Promise((resolve) => setTimeout(resolve, ms))
 }
 
 const IOSStyleSwitch = withStyles((theme) => {
@@ -168,13 +230,13 @@ const BannerContainer = styled.div`
   margin: 0;
   padding: 20px;
 
-  @media (min-width: 600px) {
+  ${match.isSM} {
     display: flex;
     align-items: center;
     padding: 20px;
   }
 
-  @media (min-width: 960px) {
+  ${match.isMD} {
     margin: 0 7.5%;
     padding: 20px 0;
   }
@@ -184,7 +246,7 @@ const BannerCopy = styled(P)`
   margin: 0 0 20px 0;
   padding: 0;
 
-  @media (min-width: 600px) {
+  ${match.isSM} {
     flex: 1 1 auto;
     margin: 0 20px 0 0;
   }
@@ -209,7 +271,7 @@ const BannerButton = styled.button`
   border: 1px solid #ffffff;
   cursor: pointer;
 
-  @media (min-width: 600px) {
+  ${match.isSM} {
     padding: 10px;
     flex: 0 0 100px;
   }

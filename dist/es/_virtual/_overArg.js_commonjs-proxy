@@ -1,0 +1,3 @@
+import _overArg from '../node_modules/lodash/_overArg.js';
+export { default } from '../node_modules/lodash/_overArg.js';
+//# sourceMappingURL=_overArg.js_commonjs-proxy.map

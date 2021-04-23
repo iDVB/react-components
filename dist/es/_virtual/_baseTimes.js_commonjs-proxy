@@ -1,0 +1,3 @@
+import _baseTimes from '../node_modules/lodash/_baseTimes.js';
+export { default } from '../node_modules/lodash/_baseTimes.js';
+//# sourceMappingURL=_baseTimes.js_commonjs-proxy.map

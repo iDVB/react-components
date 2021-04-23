@@ -1,0 +1,3 @@
+import _initCloneObject from '../node_modules/lodash/_initCloneObject.js';
+export { default } from '../node_modules/lodash/_initCloneObject.js';
+//# sourceMappingURL=_initCloneObject.js_commonjs-proxy.map

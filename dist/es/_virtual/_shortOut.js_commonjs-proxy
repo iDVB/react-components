@@ -1,0 +1,3 @@
+import _shortOut from '../node_modules/lodash/_shortOut.js';
+export { default } from '../node_modules/lodash/_shortOut.js';
+//# sourceMappingURL=_shortOut.js_commonjs-proxy.map

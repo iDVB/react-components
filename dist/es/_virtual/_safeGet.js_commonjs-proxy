@@ -1,0 +1,3 @@
+import _safeGet from '../node_modules/lodash/_safeGet.js';
+export { default } from '../node_modules/lodash/_safeGet.js';
+//# sourceMappingURL=_safeGet.js_commonjs-proxy.map

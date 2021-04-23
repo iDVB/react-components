@@ -1,0 +1,3 @@
+import stubFalse_1 from '../node_modules/lodash/stubFalse.js';
+export { default } from '../node_modules/lodash/stubFalse.js';
+//# sourceMappingURL=stubFalse.js_commonjs-proxy.map

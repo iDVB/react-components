@@ -1,0 +1,3 @@
+import _assignMergeValue from '../node_modules/lodash/_assignMergeValue.js';
+export { default } from '../node_modules/lodash/_assignMergeValue.js';
+//# sourceMappingURL=_assignMergeValue.js_commonjs-proxy.map

@@ -1,0 +1,3 @@
+import _stackHas from '../node_modules/lodash/_stackHas.js';
+export { default } from '../node_modules/lodash/_stackHas.js';
+//# sourceMappingURL=_stackHas.js_commonjs-proxy.map

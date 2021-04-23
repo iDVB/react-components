@@ -1,0 +1,33 @@
+
+@font-face {
+  font-family: 'PublicaSans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    local('PublicaSans-Regular'),
+    url('./PublicaSans/PublicaSans-Regular.woff2') format('woff2'),
+    url('./PublicaSans/PublicaSans-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'PublicaSans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src:
+    local('PublicaSans-Medium'),
+    url('./PublicaSans/PublicaSans-Medium.woff2') format('woff2'),
+    url('./PublicaSans/PublicaSans-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'KlickBold';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    local('KlickBold'),
+    url('./Klick-Bold/Klick-Bold.woff2') format('woff2'),
+    url('./Klick-Bold/Klick-Bold.woff') format('woff');
+}

@@ -1,0 +1,3 @@
+import _baseUnary from '../node_modules/lodash/_baseUnary.js';
+export { default } from '../node_modules/lodash/_baseUnary.js';
+//# sourceMappingURL=_baseUnary.js_commonjs-proxy.map

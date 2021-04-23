@@ -1,0 +1,3 @@
+import _createBaseFor from '../node_modules/lodash/_createBaseFor.js';
+export { default } from '../node_modules/lodash/_createBaseFor.js';
+//# sourceMappingURL=_createBaseFor.js_commonjs-proxy.map

@@ -1,0 +1,3 @@
+import _getPrototype from '../node_modules/lodash/_getPrototype.js';
+export { default } from '../node_modules/lodash/_getPrototype.js';
+//# sourceMappingURL=_getPrototype.js_commonjs-proxy.map

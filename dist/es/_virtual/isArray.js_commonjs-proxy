@@ -1,0 +1,3 @@
+import isArray_1 from '../node_modules/lodash/isArray.js';
+export { default } from '../node_modules/lodash/isArray.js';
+//# sourceMappingURL=isArray.js_commonjs-proxy.map

@@ -1,0 +1,3 @@
+import _isIterateeCall from '../node_modules/lodash/_isIterateeCall.js';
+export { default } from '../node_modules/lodash/_isIterateeCall.js';
+//# sourceMappingURL=_isIterateeCall.js_commonjs-proxy.map

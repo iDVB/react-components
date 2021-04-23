@@ -1,0 +1,3 @@
+import _assignValue from '../node_modules/lodash/_assignValue.js';
+export { default } from '../node_modules/lodash/_assignValue.js';
+//# sourceMappingURL=_assignValue.js_commonjs-proxy.map

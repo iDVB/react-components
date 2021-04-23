@@ -1,0 +1,3 @@
+import identity_1 from '../node_modules/lodash/identity.js';
+export { default } from '../node_modules/lodash/identity.js';
+//# sourceMappingURL=identity.js_commonjs-proxy.map

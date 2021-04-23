@@ -9,6 +9,7 @@ import { useTheme, fade } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import styled, { css } from 'styled-components';
 import { useModalContext } from '../_contexts/Modal.js';
+import { match } from '../_contexts/Theme.js';
 
 var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8;
 function ResponsiveDialog(_ref) {
@@ -58,7 +59,7 @@ var StyledDialogActions = styled(DialogActions)(_templateObject5 || (_templateOb
 });
 var StyledDialog = styled(Dialog)(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  ", "\n"])), function (_ref5) {
   var theme = _ref5.theme;
-  return css(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n    [class*='MuiDialog-paper-'] {\n      background-color: ", ";\n      /* padding: ", "px ", "px; */\n\n      @media (min-width: 600px) {\n        /* padding: ", "px; */\n        border-right: 4px solid ", ";\n      }\n    }\n  "])), theme.palette.background["default"], theme.spacing(5), theme.spacing(2), theme.spacing(7), theme.palette.primary.main);
+  return css(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n    [class*='MuiDialog-paper-'] {\n      background-color: ", ";\n      /* padding: ", "px ", "px; */\n\n      ", " {\n        /* padding: ", "px; */\n        border-right: 4px solid ", ";\n      }\n    }\n  "])), theme.palette.background["default"], theme.spacing(5), theme.spacing(2), match.isSM, theme.spacing(7), theme.palette.primary.main);
 });
 
 export default ResponsiveDialog;

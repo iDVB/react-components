@@ -1,0 +1,3 @@
+import _baseSetToString from '../node_modules/lodash/_baseSetToString.js';
+export { default } from '../node_modules/lodash/_baseSetToString.js';
+//# sourceMappingURL=_baseSetToString.js_commonjs-proxy.map

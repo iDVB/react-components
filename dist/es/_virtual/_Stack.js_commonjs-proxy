@@ -1,0 +1,3 @@
+import _Stack from '../node_modules/lodash/_Stack.js';
+export { default } from '../node_modules/lodash/_Stack.js';
+//# sourceMappingURL=_Stack.js_commonjs-proxy.map
