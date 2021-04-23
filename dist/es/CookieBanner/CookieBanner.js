@@ -9,15 +9,11 @@ import { Heading, P } from '../Typography/Typography.js';
 var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5;
 
 var CookieBanner = function CookieBanner() {
-  var _React$useState = React.useState(),
-      _React$useState2 = _slicedToArray(_React$useState, 2),
-      isMounted = _React$useState2[0],
-      setIsMounted = _React$useState2[1];
-
-  React.useEffect(function () {
-    setIsMounted(true);
-  }, []);
-  if (!isMounted) return null;
+  // const [isMounted, setIsMounted] = React.useState()
+  // React.useEffect(() => {
+  //   setIsMounted(true)
+  // }, [])
+  // if (!isMounted) return null
   return /*#__PURE__*/ReactDOM.createPortal( /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Banner, {
     isClosed: false
   }, /*#__PURE__*/React.createElement(BannerContainer, null, /*#__PURE__*/React.createElement(BannerCopy, {
@@ -28,10 +24,10 @@ var CookieBanner = function CookieBanner() {
 };
 
 function CookieDialog() {
-  var _React$useState3 = React.useState(true),
-      _React$useState4 = _slicedToArray(_React$useState3, 2),
-      tempHasConsent = _React$useState4[0];
-      _React$useState4[1];
+  var _React$useState = React.useState(true),
+      _React$useState2 = _slicedToArray(_React$useState, 2),
+      tempHasConsent = _React$useState2[0];
+      _React$useState2[1];
 
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(ResponsiveDialog, {
     open: false,
