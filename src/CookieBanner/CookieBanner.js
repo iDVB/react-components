@@ -6,6 +6,14 @@ import ThemeProvider, { match } from '../_contexts/Theme'
 import { P } from '../Typography/Typography'
 
 const CookieBanner = () => {
+  const [isMounted, setIsMounted] = React.useState()
+
+  React.useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  if (!isMounted) return null
+
   return ReactDOM.createPortal(
     <ThemeProvider themeType="onBlack">
       <Banner isClosed={false}>

@@ -1,4 +1,4 @@
-import { taggedTemplateLiteral as _taggedTemplateLiteral } from '../_virtual/_rollupPluginBabelHelpers.js';
+import { slicedToArray as _slicedToArray, taggedTemplateLiteral as _taggedTemplateLiteral } from '../_virtual/_rollupPluginBabelHelpers.js';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
@@ -8,6 +8,15 @@ import { P } from '../Typography/Typography.js';
 var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5;
 
 var CookieBanner = function CookieBanner() {
+  var _React$useState = React.useState(),
+      _React$useState2 = _slicedToArray(_React$useState, 2),
+      isMounted = _React$useState2[0],
+      setIsMounted = _React$useState2[1];
+
+  React.useEffect(function () {
+    setIsMounted(true);
+  }, []);
+  if (!isMounted) return null;
   return /*#__PURE__*/ReactDOM.createPortal( /*#__PURE__*/React.createElement(ThemeProvider, {
     themeType: "onBlack"
   }, /*#__PURE__*/React.createElement(Banner, {
