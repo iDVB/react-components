@@ -1,8 +1,5 @@
-import { taggedTemplateLiteral as _taggedTemplateLiteral } from '../_virtual/_rollupPluginBabelHelpers.js';
 import React from 'react';
 import styled from 'styled-components';
-
-var _templateObject, _templateObject2, _templateObject3;
 
 var Hero = function Hero(props) {
   var _props$heading = props.heading,
@@ -12,9 +9,18 @@ var Hero = function Hero(props) {
   }, heading));
 };
 
-var StyledHeading = styled.h1(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  position: relative;\n  margin: 0;\n  color: black;\n  z-index: 2;\n"])));
-var ImgHolder = styled.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  z-index: 2;\n"])));
-var StyledImg = styled.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  height: 100%;\n"])));
+var StyledHeading = styled.h1.withConfig({
+  displayName: "Hero__StyledHeading",
+  componentId: "b5r56t-0"
+})(["position:relative;margin:0;color:black;z-index:2;"]);
+var ImgHolder = styled.div.withConfig({
+  displayName: "Hero__ImgHolder",
+  componentId: "b5r56t-1"
+})(["position:absolute;width:100%;height:100%;z-index:2;"]);
+var StyledImg = styled.div.withConfig({
+  displayName: "Hero__StyledImg",
+  componentId: "b5r56t-2"
+})(["height:100%;"]);
 
 export default Hero;
 //# sourceMappingURL=Hero.js.map
