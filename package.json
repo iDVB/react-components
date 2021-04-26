@@ -32,7 +32,7 @@
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-copy": "^3.3.0",
     "rollup-plugin-peer-deps-external": "^2.2.3",
-    "styled-components": "5.2.0"
+    "styled-components": "5.2.3"
   },
   "peerDependencies": {
     "gatsby": "^3.2.1",
