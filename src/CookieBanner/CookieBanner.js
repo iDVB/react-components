@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { P } from '../Typography/Typography'
 
 const CookieBanner = () => {
   return (
@@ -34,7 +33,6 @@ const Banner = styled.div`
   width: 100%;
   color: #ffffff;
   background-color: #000000;
-  font-family: ${({ theme }) => theme.typography.fontFamily};
   font-size: 12px;
   transition: all 0.3s;
   transform: ${({ isClosed }) =>
@@ -58,7 +56,7 @@ const BannerContainer = styled.div`
   }
 `
 
-const BannerCopy = styled(P)`
+const BannerCopy = styled.p`
   margin: 0 0 20px 0;
   padding: 0;
 
