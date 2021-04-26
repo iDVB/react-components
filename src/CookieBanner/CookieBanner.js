@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const CookieBanner = () => {
   return (
     <div>
-      <Banner isClosed={false}>
+      <Banner>
         <BannerContainer>
           <BannerCopy variant="body2">
             We use cookies and other tracking technologies to assist with
@@ -35,8 +35,7 @@ const Banner = styled.div`
   background-color: #000000;
   font-size: 12px;
   transition: all 0.3s;
-  transform: ${({ isClosed }) =>
-    isClosed ? 'translateY(500px)' : 'translateY(0)'};
+  transform: translateY(0);
   z-index: 9999;
 `
 
