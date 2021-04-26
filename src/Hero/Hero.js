@@ -1,6 +1,4 @@
 import React from 'react'
-import Box from '@material-ui/core/Box'
-import Container from '@material-ui/core/Container'
 import styled from 'styled-components'
 
 const Hero = (props) => {
@@ -13,18 +11,7 @@ const Hero = (props) => {
       <ImgHolder>
         <StyledImg />
       </ImgHolder>
-      <Container maxWidth="lg">
-        <Box
-          position="relative"
-          zIndex="3"
-          minHeight={100}
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
-        >
-          <StyledHeading variant="h1">{heading}</StyledHeading>
-        </Box>
-      </Container>
+      <StyledHeading variant="h1">{heading}</StyledHeading>
     </div>
   )
 }
