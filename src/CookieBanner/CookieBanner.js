@@ -72,7 +72,6 @@ const BannerTextButton = styled.button`
   text-decoration: underline;
 `
 
-// TODO: use Button from klick react-components package
 const BannerButton = styled.button`
   margin: 0;
   padding: 20px 10px;
