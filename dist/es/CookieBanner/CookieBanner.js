@@ -1,6 +1,5 @@
 import { slicedToArray as _slicedToArray, objectWithoutProperties as _objectWithoutProperties, extends as _extends, taggedTemplateLiteral as _taggedTemplateLiteral } from '../_virtual/_rollupPluginBabelHelpers.js';
 import React from 'react';
-import 'react-dom';
 import { Box, FormControlLabel, Button, withStyles, Switch } from '@material-ui/core';
 import styled from 'styled-components';
 import ResponsiveDialog from '../Dialog/Dialog.js';

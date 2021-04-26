@@ -10,7 +10,6 @@ const Hero = (props) => {
 
   return (
     <div>
-      <Overlay />
       <ImgHolder>
         <StyledImg />
       </ImgHolder>
@@ -42,15 +41,6 @@ const ImgHolder = styled.div`
   width: 100%;
   height: 100%;
   z-index: 2;
-`
-
-const Overlay = styled.div`
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background: white;
-  z-index: 3;
-  opacity: 0.3;
 `
 
 const StyledImg = styled.div`

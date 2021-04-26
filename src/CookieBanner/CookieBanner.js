@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import { Box, FormControlLabel, Switch, withStyles, Button } from '@material-ui/core'
 import styled from 'styled-components'
 
